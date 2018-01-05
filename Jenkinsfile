@@ -10,7 +10,4 @@ node {
   stage('stage 2') {
     echo "We are at stage 2"
   }
-  stage('stage Say Hello') {
-    bat "./sayHello.bat"
-  }
 }
