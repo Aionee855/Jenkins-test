@@ -11,7 +11,7 @@ node {
     if (isUnix()) {
     sh "./sayHello.sh"
     } else {
-    bat "sayHello.bat"
+    bat "sayHello.cmd"
     }
   }
 }
