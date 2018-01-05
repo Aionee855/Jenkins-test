@@ -6,9 +6,9 @@ pipeline {
     maven 'Maven 3.5.0'
   }
   stages {
-    stage ('Checkout') {
+    stage ('Stage 1') {
       steps {
-        git https://github.com/Aionee855/Jenkins-test.git
+        echo "Test started"
         }
       }
     stage ('build') {
