@@ -21,8 +21,8 @@ pipeline {
     post {
       always {
         archive "target/**/*"
-        junit '**/target/first-pipeline/*.xml'
+        junit '**/target/surefire-reports/*.xml'
       }
     }
-  
+
 }
