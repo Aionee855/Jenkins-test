@@ -14,12 +14,13 @@ pipeline {
       }
     stage ('build') {
       steps {
-        bat 'mvn clean compile'
+        bat 'mvn clean install -Dmaven.test.failure.ignore=true'
       }
     }
-    stage ('test') {
-      steps {
-        junit '**/target/*.xml'
+    post {
+      always {
+        archive "target/**/*"
+        junit '**/target/first-pipeline/*.xml'
       }
     }
   }
