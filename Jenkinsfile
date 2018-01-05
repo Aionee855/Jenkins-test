@@ -2,11 +2,19 @@
 
 pipeline {
   agent any
+  tools {
+    maven 'Maven 3.5.0'
+  }
   stages {
-    stage ('Hello from Github') {
+    stage ('Checkout') {
       steps {
-        echo "Hello World!"
+        git https://github.com/Aionee855/Jenkins-test.git
         }
       }
+    stage ('build') {
+      steps {
+        bat 'mvn clear compile'
+      }
+    }
   }
 }
