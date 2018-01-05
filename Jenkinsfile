@@ -8,6 +8,10 @@ node {
     echo "We are at stage 2"
   }
   stage('Say Hello') {
-    bat "./sayHello.bat"
+    if (isUnix()) {
+    sh "./sayHello.sh"
+    } else {
+    bat "sayHello.bat"
+    }
   }
 }
