@@ -14,7 +14,7 @@ pipeline {
       }
     stage ('build') {
       steps {
-        sh 'mvn clear compile'
+        bat 'mvn clear compile'
       }
     }
   }
