@@ -17,5 +17,10 @@ pipeline {
         bat 'mvn clean compile'
       }
     }
+    stage ('test') {
+      steps {
+        junit '**/target/*.xml'
+      }
+    }
   }
 }
