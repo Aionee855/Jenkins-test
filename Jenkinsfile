@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-#!C:\Git\bin\bash.exe
+#!/C:/Git/bin/bash.exe
 
 pipeline {
   agent any
